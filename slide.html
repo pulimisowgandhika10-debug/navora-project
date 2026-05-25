@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Slide Menu</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{text-align:center;padding-top:60px}
+
+button{
+  padding:10px 20px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+  background:#00eaff;
+  cursor:pointer;
+}
+
+.center-box{
+  margin-top:180px;
+}
+
+.side-menu{
+  position:fixed;
+  top:0;
+  left:-220px;
+  width:220px;
+  height:100%;
+  background:rgba(0,0,0,.9);
+  padding-top:60px;
+  transition:.3s;
+}
+
+.side-menu a{
+  display:block;
+  padding:15px;
+  color:#fff;
+  text-decoration:none;
+}
+
+.side-menu a:hover{background:#00eaff;color:#000}
+.side-menu.active{left:0}
+</style>
+</head>
+
+<body>
+
+<h1>Slide Menu ➡</h1>
+
+<div class="center-box">
+  <button onclick="menu.classList.toggle('active')">☰ Menu</button>
+  <button onclick="history.back()">⬅ Back</button>
+</div>
+
+<div id="menu" class="side-menu">
+  <a href="home.html">Home</a>
+  <a href="features.html">Features</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+</body>
+</html>
